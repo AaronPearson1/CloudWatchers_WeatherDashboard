@@ -1,0 +1,30 @@
+.currentday{
+    font-weight: bold;
+    font-size: 25px;
+}
+.currenttempdegree{
+    font-weight: bold;
+    font-size: 18px;
+}
+.cityname{
+    font-size: 32px;
+    font-weight: bold;
+}
+.row {
+
+}
+.container{
+    background-color: #fd6214;
+    max-width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+#page-header{
+    background-color:#fd6214;
+}
+.card{
+    max-width: 100%;
+}
+.card-header{
+    text-align: center;
+}

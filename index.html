@@ -2,79 +2,146 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cloud Watchers Wheather Dashboard</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css” integrity=”sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm” crossorigin=”anonymous">
+    <title>Cloud Watchers Weather Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    <div class="bg-dark pt-2 pb-2">
-        <div class="container">
-            <h1 class="text-center text-white">Cloud Watchers Wheather Dashboard</h1>
+    <div id="page-header" class="bg-dark pt-2 pb-2"> 
+    <div class="container">
+        <h1 class="text-center text-black">Cloud Watchers Wheather Dashboard</h1>
+    </div>
+    </div>
+
+<main class="flex-row justify-space-between">
+    <div>
+        <div class="card">
+            <h3 class="card-header text-uppercase">Search for a city</h3>
+            <form id="city-form" class="card-body">
+            <label class="form-label" for="cityname">City Name</label>
+            <input name="cityname" id="cityname" type="text" autofocus="true" class="form-input" />
+            <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
+    </div> 
+
+<div id= "weatherbox" style= 'display:block'>
+
+    <div>
+        <div class="row mr-0 current">
+            <div class="col-12 border border-dark m-3 rounded">
+                <div class="row">
+                    <div class="col-12">
+                        <span class="cityname" ></span>
+                        <img class="currentpic">
+                    </div>
+                </div>
+                <div class="row">
+                <div class="col-12">
+                    <p class="currentday"></p>
+                </div>
+            </div>
+                <div class="row">
+                    <div class="col-12">
+                        <p class="currenttempdegree"></p>
+                    </div>
+                </div>
+                <div class="row">
+                <div class="col-12">
+                    <p class="currentdescrip"></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <p class="currenthumidity"></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <p class="wind"></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <p class="uvi-index"></p>
+                </div>
+            </div>
         </div>
     </div>
 
-    <main class="flex-row justify-content-space-between">
-        <div class="col-12 col-md-4">
-            <div class="card">
-                <h3 class="card-header text-uppercase">Search for a City</h3>
-                <form id="city-form" class="card-body">
-                    <label class="form-label" for="cityname">City Name</label>
-                    <input name="cityname" id="cityname" type="text" autofocus="true" class="form-input"/>
-                    <button type="submit" class="btn">Submit</button>
-                </form>
+    <h2 class="fiveday">5-Day Forecast:</h2>
+    <div class="row bg-dark">
+        
+        <div class="col bg-dark text-white ml-3 mb-3 rounded weather1">
+            <div class="location">
+            <img class="icon1">
+            </div>
+            <p class="date1"></p>
+            <div class="temp">
+                <h2 class="temp-degree1"></h2>
+                <div class="humidity1">
+                
+                </div>
             </div>
         </div>
-    </main>
 
-    <div id="weatherbox" style="display:none">
-
-        <div class="col-8">
-            <div class="row mr-0 current">
-                <div class="col-12 border border-dark m-4 rounded">
-                    <div class="row">
-                        <div class="col-12">
-                            <span class="cityname"></span>
-                            <img class="currentpic">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <p class="currentday"></p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <p class="currenttemperature"></p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <p class="description"></p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <p class="humidty"></p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <p class="wind"></p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <p class="uvi-index"></p>
-                        </div>
+        <div class="col bg-dark text-white ml-3 mb-3 rounded weather2">
+            <div class="location">
+            <img class="icon2">
+            </div>
+            <p class="date2"></p>
+            <div class="temp">
+                <h2 class="temp-degree2"></h2>
+                <div class="humidity2">
+                
+                </div>
+            </div>
+        </div>
+        
+            <div class="col bg-dark text-white ml-3 mb-3 rounded weather3">
+            <div class="location">
+                <img class="icon3">
+                </div>
+                <p class="date3"></p>
+                <div class="temp">
+                <h2 class="temp-degree3"></h2>
+                <div class="humidity3">
+                    
+                </div>
+            </div>
+            </div>
+        
+            <div class="col bg-dark text-white ml-3 mb-3 rounded weather4">
+                <div class="location">
+                <img class="icon4">
+                </div>
+                <p class="date4"></p>
+                <div class="temp">
+                    <h2 class="temp-degree4"></h2>
+                    <div class="humidity4">
+                
                     </div>
                 </div>
             </div>
-        
-        </div>
-    
-    </div>
-    
-</body>
+            
+                <div class="col bg-dark text-white ml-3 mb-3 rounded weather5">
+                <div class="location">
+                    <img class="icon5">
+                    </div>
+                    <p class="date5"></p>
+                    <div class="temp">
+                    <h2 class="temp-degree5"></h2>
+                    <div class="humidity5">
+                        
+                    </div>
+                </div>
+                </div>
+                </div>
+            </div>
+            </div>
+
+        <script src="assets/js/script.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+</body> 
 </html>
